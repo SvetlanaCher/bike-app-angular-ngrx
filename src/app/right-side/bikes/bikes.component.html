@@ -1,0 +1,17 @@
+<div class="right-block" *ngIf="!loading">
+    <div *ngFor="let item of bikes | async" class="right-card">
+        <p> {{ item.name }} </p>
+        <p> {{ item.extra.address}} </p>
+        <p [ngStyle]="{'color': item.free_bikes === 0 ? 'red' : 'black'}"> Quantity of free bikes: {{ item.free_bikes }} </p>
+        
+        <button 
+            (click)="saveBike(item); isBikeSaved(item)" 
+            [disabled]="item.free_bikes === 0 ? 'true' : null"
+        >Save Bike</button>
+        <button 
+            (click)="deleteBike(item); isBikeSaved(item)" 
+            [disabled]="item.free_bikes === 0 ? 'true' : null"
+        >Delete Bike</button>
+    </div>
+</div>
+<p *ngIf="loading">Loading...</p>

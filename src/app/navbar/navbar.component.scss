@@ -1,0 +1,10 @@
+.navbar-block {
+    display: flex;
+    flex-direction: row;
+
+    .navbar-text {
+        margin-left: 20px;
+        font-size: 20px;
+        margin-top: 12px;
+    }
+}

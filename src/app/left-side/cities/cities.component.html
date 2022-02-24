@@ -1,0 +1,7 @@
+<div class="left-block">
+    <div *ngFor="let item of cities | async" class="left-card" (click)='chooseCity(item.id)'>
+        <p> {{ item.location.city }} , {{ item.location.country }} </p>
+        <p> {{ item.name }} </p> 
+        <small> {{ item.company }} </small>
+    </div>
+</div>

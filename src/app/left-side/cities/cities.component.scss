@@ -1,0 +1,9 @@
+.left-block {
+    border-right: 2px solid black;
+    cursor: pointer;
+
+    .left-card {
+        border: 1px solid rgb(0, 0, 0); 
+        padding: 10px 0; 
+    }
+}

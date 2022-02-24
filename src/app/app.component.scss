@@ -1,0 +1,38 @@
+$nav-back: black;
+.main-container {
+    text-align: center;
+    display: grid;
+  
+    grid-template-areas: 
+          'nav nav'
+          'left right';
+  
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 2fr 3fr;
+
+    .navbar-container {
+        background-color: $nav-back;
+        grid-area: nav;
+        border-bottom: 2px solid black;
+        text-align: start;
+        padding-left: 30px;
+        align-items: center;
+        display: flex;
+        color: whitesmoke;
+    }
+
+    .left-container {
+        grid-area: left;
+        overflow: auto;
+        height: 100vh; 
+    }
+
+    .right-container {
+        grid-area: right;
+        overflow: auto;
+        height: 100vh;
+    
+        
+    }
+}
+
